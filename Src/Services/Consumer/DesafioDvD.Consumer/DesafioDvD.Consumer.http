@@ -1,0 +1,6 @@
+@DesafioDvD.Consumer_HostAddress = http://localhost:5097
+
+GET {{DesafioDvD.Consumer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

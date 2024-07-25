@@ -9,12 +9,19 @@ namespace DesafioDvD.Domain.Entities
     {
         protected Director()
         {
-            
+            /*
+             - Construtor protected
+            O construtor protected é usado para permitir que a classe Director seja herdada por outras classes, 
+            mas impede que instâncias dessa classe sejam criadas diretamente usando este construtor.
+            Esse padrão é útil para garantir que a inicialização da classe ocorra de maneira controlada.
+            Por exemplo, pode ser utilizado quando você deseja forçar a inicialização de certas propriedades,
+            como Name e Surname, que não podem ser deixadas vazias ou com valores inválidos.
+             */
         }
 
         public Director(string name, string surname)
         {
-            //Como os metodos tem suas logicas de validacao, vamos coloca-los no construtor pra validar
+            // Inicializa as propriedades através dos métodos de atualização.
             UpdateName(name);
             UpdateSurname(surname);
         }

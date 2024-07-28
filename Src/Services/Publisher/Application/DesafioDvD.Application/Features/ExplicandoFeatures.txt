@@ -1,0 +1,2 @@
+﻿features seria tipo `use case`, porem nao tera query sera apenas para escrita no banco
+

@@ -6,4 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\DesafioDvD.Domain\DesafioDvD.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Directors\Commands\DeleteDirector\" />
+    <Folder Include="Features\Directors\Commands\UpdateDirector\" />
+    <Folder Include="Features\Dvds\Commands\CreateDvd\" />
+    <Folder Include="Features\Dvds\Commands\DeleteDvd\" />
+    <Folder Include="Features\Dvds\Commands\ReturnDvd\" />
+    <Folder Include="Features\Dvds\Commands\RentDvd\" />
+    <Folder Include="Features\Dvds\Commands\UpdateDvd\" />
+  </ItemGroup>
+
 </Project>

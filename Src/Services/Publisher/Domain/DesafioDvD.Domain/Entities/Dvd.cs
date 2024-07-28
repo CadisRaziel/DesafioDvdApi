@@ -3,6 +3,7 @@ using DesafioDvD.Domain.Entities.Enums;
 
 namespace DesafioDvD.Domain.Entities
 {
+    //Dominio de escrita
     public class Dvd : Entity
     {
         protected Dvd()

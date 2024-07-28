@@ -5,6 +5,8 @@ using System.Xml.Linq;
 
 namespace DesafioDvD.Domain.Entities
 {
+
+    //Dominio de escrita
     public class Director : Entity
     {
         protected Director()

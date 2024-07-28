@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace DesafioDvD.Domain.Entities
 {
-    public class Director
+    public class Director : Entity
     {
         protected Director()
         {

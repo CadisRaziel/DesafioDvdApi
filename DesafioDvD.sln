@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{53
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3B0829AB-1101-4E0E-BBD9-D9F573EF9C85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioDvD.Core", "Src\BuildingBlocks\DesafioDvD.Core\DesafioDvD.Core.csproj", "{8D73A9EE-21BB-48A8-9A86-F68A85D79EA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioDvD.Core", "Src\BuildingBlocks\DesafioDvD.Core\DesafioDvD.Core.csproj", "{8D73A9EE-21BB-48A8-9A86-F68A85D79EA7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumer", "Consumer", "{8BF264B0-FE9F-48C1-97F3-8F5810D504E3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publisher", "Publisher", "{2386285F-4744-4176-82BD-11E49C8F74D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioDvD.Consumer", "Src\Services\Consumer\DesafioDvD.Consumer\DesafioDvD.Consumer.csproj", "{B04BEF90-D5BD-4944-9C70-F8D6B94E733E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioDvD.Consumer", "Src\Services\Consumer\DesafioDvD.Consumer\DesafioDvD.Consumer.csproj", "{B04BEF90-D5BD-4944-9C70-F8D6B94E733E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{91457274-D840-48CB-A2B8-B8771D15F9F8}"
 EndProject
@@ -35,19 +35,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{1D303083-30DC-419C-A370-EEEC22A0E724}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioDvD.Domain", "Src\Services\Publisher\Domain\DesafioDvD.Domain\DesafioDvD.Domain.csproj", "{2DDC7A46-1910-4616-B9C8-F7C0FF275288}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioDvD.Domain", "Src\Services\Publisher\Domain\DesafioDvD.Domain\DesafioDvD.Domain.csproj", "{2DDC7A46-1910-4616-B9C8-F7C0FF275288}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioDvD.Application", "Src\Services\Publisher\Application\DesafioDvD.Application\DesafioDvD.Application.csproj", "{43582D47-95D9-4A0F-A741-7E6548756E93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioDvD.Application", "Src\Services\Publisher\Application\DesafioDvD.Application\DesafioDvD.Application.csproj", "{43582D47-95D9-4A0F-A741-7E6548756E93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioDvD.Infrastructure", "Src\Services\Publisher\Infrastructure\DesafioDvD.Infrastructure\DesafioDvD.Infrastructure.csproj", "{BC3F9329-DD59-4EF8-B310-B079FCB8C735}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioDvD.Infrastructure", "Src\Services\Publisher\Infrastructure\DesafioDvD.Infrastructure\DesafioDvD.Infrastructure.csproj", "{BC3F9329-DD59-4EF8-B310-B079FCB8C735}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioDvD.WebApi", "Src\Services\Publisher\Presentation\DesafioDvD.WebApi\DesafioDvD.WebApi.csproj", "{13077ED2-A3FF-4B96-972E-670E11B413BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioDvD.WebApi", "Src\Services\Publisher\Presentation\DesafioDvD.WebApi\DesafioDvD.WebApi.csproj", "{13077ED2-A3FF-4B96-972E-670E11B413BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioDvD.Query.Application", "Src\Shared\Queries\Application\DesafioDvD.Query.Application\DesafioDvD.Query.Application.csproj", "{D26A771B-283B-497E-94AB-3D409E1A61FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioDvD.Query.Application", "Src\Shared\Queries\Application\DesafioDvD.Query.Application\DesafioDvD.Query.Application.csproj", "{D26A771B-283B-497E-94AB-3D409E1A61FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioDvD.Query.Domain", "Src\Shared\Queries\Domain\DesafioDvD.Query.Domain\DesafioDvD.Query.Domain.csproj", "{F10F4AB1-B111-4848-AC95-736F6C72DFD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioDvD.Query.Domain", "Src\Shared\Queries\Domain\DesafioDvD.Query.Domain\DesafioDvD.Query.Domain.csproj", "{F10F4AB1-B111-4848-AC95-736F6C72DFD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioDvD.Query.Infrastructure", "Src\Shared\Queries\Infrastructure\DesafioDvD.Query.Infrastructure\DesafioDvD.Query.Infrastructure.csproj", "{2FE69FBA-0ECC-469F-BBD7-3B19F414C48B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioDvD.Query.Infrastructure", "Src\Shared\Queries\Infrastructure\DesafioDvD.Query.Infrastructure\DesafioDvD.Query.Infrastructure.csproj", "{2FE69FBA-0ECC-469F-BBD7-3B19F414C48B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

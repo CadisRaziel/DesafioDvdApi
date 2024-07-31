@@ -96,3 +96,8 @@ namespace DesafioDvD.Domain.Entities
 
     }
 }
+
+/*
+ Aqui nos metodos retornamos varias  throw new DomainException caso der algo errado.
+ E mais corretor ser realizado dentro dessa classe essas excecoes, pois se algo deu errado e chegou ate aqui vale a pena parar tudo lancnado uma exception
+ */

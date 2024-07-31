@@ -5,8 +5,9 @@ namespace DesafioDvD.Application.Features.Directors.Commands.CreateDirector
     //Aos olhos do mediator todo comando e query sao requisicoes
     //IRequest -> Requisicao
     //<CreateDirectorResponse> -> Retorno da requisicao
-    public record CreateDirectorCommand(string Name, string Surname) : IRequest<CreateDirectorResponse>;    
-  
+    //Request e a solicitacao feita pelo usuario
+    public record CreateDirectorCommand(string Name, string Surname) : IRequest<CreateDirectorResponse>;   //->  Obs: nosso objeto de resposta nao precisa ser necessariamente um record, poderiamos retornar um int ID ou um bool  
+
 }
 
 /*

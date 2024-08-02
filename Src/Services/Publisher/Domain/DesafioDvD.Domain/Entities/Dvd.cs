@@ -43,9 +43,9 @@ namespace DesafioDvD.Domain.Entities
 
 
         /// <summary>
-        /// Alugar uma copia
-        /// Valida se eu tenho 0 copias ou se o dvd esta indisponivel, se tiver lanca uma execption
-        /// Caso estiver disponivel eu removo 1 dvd e atualizo o UpdateCopies
+        /// Alugar uma copia,
+        /// Valida se eu tenho zero copias ou se o dvd esta indisponivel, se tiver lanca uma execption,
+        /// Caso estiver disponivel e tiver copias eu removo 1 dvd(pois esta sendo retirado da loja) e atualizo o UpdateCopies.
         /// </summary>
         /// <exception cref="DomainException"></exception>
         public void RentCopy()
@@ -61,9 +61,9 @@ namespace DesafioDvD.Domain.Entities
 
 
         /// <summary>
-        /// Devolver um dvd
-        /// Valida se o dvd esta indisponivel se estiver lanca uma exception 
-        /// Caso estiver disponivel eu atualizo meu UpdateCopies com a devolucao
+        /// Devolver um dvd,
+        /// Valida se o dvd esta indisponivel se estiver lanca uma exception ,
+        /// Caso estiver disponivel eu atualizo meu UpdateCopies com a devolucao.
         /// </summary>
         /// <exception cref="DomainException"></exception>
         public void ReturnCopy()
@@ -79,10 +79,10 @@ namespace DesafioDvD.Domain.Entities
 
 
         /// <summary>
-        /// Recebemos um directorId
-        /// Valida se o dvd esta indisponivel se estiver lanca uma exception 
-        /// Caso estiver disponivel farei uma validacao para ver se o directorId e igual Guid.Empty(ou seja se ele e valido) se nao valido for eu lanco uma exception
-        /// Caso contrario eu atualizo o DirectorId com o directorId recebido e atualizo o UpdatedAt com o horario atual
+        /// Recebemos um directorId,
+        /// Valida se o dvd esta indisponivel se estiver lanca uma exception ,
+        /// Caso estiver disponivel farei uma validacao para ver se o directorId e igual Guid.Empty(ou seja se ele e valido) se nao valido for eu lanco uma exception,
+        /// Caso contrario eu atualizo o DirectorId com o directorId recebido e atualizo o UpdatedAt com o horario atual.
         /// </summary>
         /// <param name="directorId"></param>
         /// <exception cref="DomainException"></exception>
@@ -100,10 +100,10 @@ namespace DesafioDvD.Domain.Entities
 
 
         /// <summary>
-        /// Recebemos um copies
-        /// Valida se o dvd esta indisponivel se estiver lanca uma exception 
-        /// Caso estiver disponivel faremos mais uma validacao para ver se Copies e menor que 0, se for lanca uma exception
-        /// Caso nao for atualizamos a variavel Copies com o valor copies e o UpdatedAt com a data atual
+        /// Recebemos um copies,
+        /// Valida se o dvd esta indisponivel se estiver lanca uma exception,
+        /// Caso estiver disponivel faremos mais uma validacao para ver se Copies e menor que 0, se for lanca uma exception,
+        /// Caso nao for atualizamos a variavel Copies com o valor copies e o UpdatedAt com a data atual.
         /// </summary>
         /// <param name="copies"></param>
         /// <exception cref="DomainException"></exception>
@@ -121,11 +121,11 @@ namespace DesafioDvD.Domain.Entities
 
 
         /// <summary>
-        /// Recebemos um date
-        /// Valida se o dvd esta indisponivel se estiver lanca uma exception 
-        /// Caso estiver disponivel pegamos a data atual em uma variavel todayDate(data atual)
-        /// Validamos se todayDate(data atual) e menor que o parametro date, se for lanca uma exception (pois imagine se o usuario poe uma data maior do que a atual, o dvd nao existiria)
-        /// Caso for maior atualizamos a data do Published
+        /// Recebemos um date,
+        /// Valida se o dvd esta indisponivel se estiver lanca uma exception,
+        /// Caso estiver disponivel pegamos a data atual em uma variavel todayDate(data atual),
+        /// Validamos se todayDate(data atual) e menor que o parametro date, se for lanca uma exception (pois imagine se o usuario poe uma data maior do que a atual, o dvd nao existiria),
+        /// Caso for maior atualizamos a data do Published.
         /// E atualizamos o UpdatedAt com a data atual da variavel todayDate(data atual)
         /// </summary>
         /// <param name="date"></param>
@@ -145,11 +145,11 @@ namespace DesafioDvD.Domain.Entities
 
 
         /// <summary>
-        /// Recebemos um genre (Porem nao e o ENUM e sim um int), pois assim estamos escondendo nosso dominio das partes externas
-        /// Valida se o dvd esta indisponivel se estiver lanca uma exception 
-        /// Caso estiver disponivel, faremos um switch e caso nosso genre for de 0...18 ele tem os casos proprios
-        /// Se nao qualquer outro caso que passe 18, ele lanca uma exception
-        /// Apos isso atualizamos a hora no UpdatedAt
+        /// Recebemos um genre (Porem nao e o ENUM e sim um int), pois assim estamos escondendo nosso dominio das partes externas,
+        /// Valida se o dvd esta indisponivel se estiver lanca uma exception,
+        /// Caso estiver disponivel, faremos um switch e caso nosso genre for de 0...18 ele tem os casos proprios,
+        /// Se nao qualquer outro caso que passe 18, ele lanca uma exception,
+        /// Apos isso atualizamos a hora no UpdatedAt.
         /// </summary>
         /// <param name="genre"></param>
         /// <exception cref="DomainException"></exception>
@@ -187,10 +187,10 @@ namespace DesafioDvD.Domain.Entities
 
 
         /// <summary>
-        /// Recebemos um titulo
-        /// Valida se o dvd esta indisponivel se estiver lanca uma exception 
-        /// Caso estiver disponivel vamos validar se o titulo tem espacos em branco ou esta vazio, validamos tambem o tamanho do titulo com nossas constantes MIN_TITLE_LENGTH/MAX_TITLE_LENGTH
-        /// Caso passe das duas validacoes passamos o title para o Title e atualizamos o horario(UpdatedAt)
+        /// Recebemos um titulo,
+        /// Valida se o dvd esta indisponivel se estiver lanca uma exception,
+        /// Caso estiver disponivel vamos validar se o titulo tem espacos em branco ou esta vazio, validamos tambem o tamanho do titulo com nossas constantes MIN_TITLE_LENGTH/MAX_TITLE_LENGTH,
+        /// Caso passe das duas validacoes passamos o title para o Title e atualizamos o horario(UpdatedAt).
         /// </summary>
         /// <param name="title"></param>
         /// <exception cref="DomainException"></exception>
@@ -208,10 +208,10 @@ namespace DesafioDvD.Domain.Entities
 
 
         /// <summary>
-        /// Valida se o dvd esta indisponivel se estiver lanca uma exception 
-        /// Caso estiver disponivel setamos o Available como false (Dizemos que esta indisponivel)
-        /// Setamos o Copies como 0 (Zeramos as copias)
-        /// Atualizamos a hora do DeletedAt para data atual
+        /// Valida se o dvd esta indisponivel se estiver lanca uma exception,
+        /// Caso estiver disponivel setamos o Available como false (Dizemos que esta indisponivel),
+        /// Setamos as copias como 0 (Zeramos as copias),
+        /// Atualizamos a hora do DeletedAt para data atual.
         /// </summary>
         public void DeleteDvD()
         {

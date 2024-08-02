@@ -10,11 +10,4 @@
     <ProjectReference Include="..\..\Domain\DesafioDvD.Domain\DesafioDvD.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Dvds\Commands\DeleteDvd\" />
-    <Folder Include="Features\Dvds\Commands\ReturnDvd\" />
-    <Folder Include="Features\Dvds\Commands\RentDvd\" />
-    <Folder Include="Features\Dvds\Commands\UpdateDvd\" />
-  </ItemGroup>
-
 </Project>

@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Shared\Queries\Infrastructure\DesafioDvD.Query.Infrastructure\DesafioDvD.Query.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\DesafioDvD.Infrastructure\DesafioDvD.Infrastructure.csproj" />
   </ItemGroup>
 

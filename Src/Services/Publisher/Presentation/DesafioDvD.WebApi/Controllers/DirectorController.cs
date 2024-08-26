@@ -2,6 +2,7 @@
 using DesafioDvD.Application.Features.Directors.Commands.DeleteDirector;
 using DesafioDvD.Application.Features.Directors.Commands.UpdateDirector;
 using DesafioDvD.Core;
+using DesafioDvD.Query.Application.Features.Directors.Queries.GetDirector;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;

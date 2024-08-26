@@ -4,8 +4,7 @@ using FluentValidation;
 namespace DesafioDvD.Query.Application.Features.Directors.Commands.CreateDirector
 {
     public class CreateDirectorCommandValidator : AbstractValidator<CreateDirectorCommand>
-    {
-    {
+    {    
         private const int MIN_LENGTH = 3;
         private const int MAX_LENGTH = 60;
 

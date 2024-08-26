@@ -6,7 +6,7 @@ namespace DesafioDvD.Query.Application
 {
     public static class ApplicationServiceCollection
     {
-        public static IServiceCollection AddQueryApplication(this IServiceCollection services)
+        public static IServiceCollection AddReadApplication(this IServiceCollection services)
         {
             //Vai pegar todos validators que eu criei e vai registrar no injetor de dependencia  
             //Esse AddValidatorsFromAssembly e do package FluentValidation.DependencyInjectionExtension            

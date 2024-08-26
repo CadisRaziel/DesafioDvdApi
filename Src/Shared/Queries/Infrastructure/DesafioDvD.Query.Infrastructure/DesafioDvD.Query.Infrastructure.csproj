@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\DesafioDvD.Query.Application\DesafioDvD.Query.Application.csproj" />
+  </ItemGroup>
+
 </Project>

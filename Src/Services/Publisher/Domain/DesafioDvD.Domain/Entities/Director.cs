@@ -63,6 +63,7 @@ namespace DesafioDvD.Domain.Entities
                 throw new DomainException($"Invalid name for director");
             
                 Name = name ;
+            UpdatedAt = DateTime.Now;
         }
 
        /// <summary>
@@ -76,6 +77,7 @@ namespace DesafioDvD.Domain.Entities
                 throw new DomainException($"Invalid surname for director");
 
             Surname = surname;
+            UpdatedAt = DateTime.Now;
         }
 
 

@@ -22,11 +22,11 @@ namespace DesafioDvD.Infrastructure.Repositories
 
         public async Task<bool> Delete(Guid Id)
         {
-            await _context.Dvds
+          return await _context.Dvds
                 .Where(d => d.Id == Id)
-                .ExecuteDeleteAsync();
-
-            return await _context.SaveChangesAsync() > 0;
+                .ExecuteDeleteAsync() > 0;
+            //ExecuteDeleteAsync -> Ele tambem realiza o SaveChangesAsync() nao sendo necessario a linha abaixo !!!
+            //return await _context.SaveChangesAsync() > 0;            
         }
 
         public async Task<Dvd> Get(Guid Id)

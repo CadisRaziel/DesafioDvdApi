@@ -7,7 +7,7 @@ docker run --name sqlserver -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=rhythms" -p
 3 passo rodar o docker do mongoDb (para visualizar clique no mongo no docker e clique em `exec` e digite `mongosh` (ele cria o banco no momento que receber uma msg de escrita)
 docker run --name mongo -d -p 27017:27017 -e AUTH=no mongo\
 
-4 passo rodar o docker do rabbitMQ (5672:5672  para ele trocar msg) (15672:15672 para nosso management para termos acesso a uma interface do rabbitMQ, no docker clique nessa porta, usario e senha: test)
+4 passo rodar o docker do rabbitMQ (5672:5672  para ele trocar msg) (15672:15672 para nosso management para termos acesso a uma interface do rabbitMQ, no docker clique nessa porta, usario e senha: guest)
 docker run -d rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
 5 passo rodar o docker do redis
@@ -43,3 +43,11 @@ e essas mensagems sao utilizadas como o sistema do RabbitMQ (Message broker)
 
 desafio -> https://www.youtube.com/watch?v=XMQ0gxwcqyo
 depuracao -> https://www.youtube.com/watch?v=Mxn0BWk5WGA&t=3461s
+
+
+
+
+Inicializar mais de uma solucao
+1 -> Clique em `Solucao DesafioDvd (9 de 9 projeto) com o botao direito
+2 -> selecione `Configurar projetos de inicializacao`
+3 -> Inicie o `Consumer` e a `WebApi`

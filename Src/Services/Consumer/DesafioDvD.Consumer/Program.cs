@@ -1,4 +1,9 @@
+using DesafioDvD.Consumer.Setup;
+
 var builder = WebApplication.CreateBuilder(args);
+
+//Configuracao 
+builder.Services.AddConsumerConfig(builder.Configuration);
 
 // Add services to the container.
 

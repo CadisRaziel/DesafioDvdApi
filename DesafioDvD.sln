@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{D269ABD1-81BE-4005-8FA0-3D2BC3DAF67F}"
+	ProjectSection(SolutionItems) = preProject
+		Dockers.txt = Dockers.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{C8442933-C5DB-43E5-9E81-7BDD4DA858E7}"
 EndProject
@@ -26,6 +29,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F213A62F-4593-4214-80E9-D088174F43A3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{E65109A9-B5E9-4342-B044-21CD47627DB4}"
+	ProjectSection(SolutionItems) = preProject
+		projeto de inicializacao.txt = projeto de inicializacao.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Queries", "Queries", "{44ED67A7-C7AC-477D-9BA0-AA1477938E5B}"
 EndProject

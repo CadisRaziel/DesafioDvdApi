@@ -2,7 +2,9 @@
 using DesafioDvD.Application.Features.Directors.Commands.DeleteDirector;
 using DesafioDvD.Application.Features.Directors.Commands.UpdateDirector;
 using DesafioDvD.Core;
+using DesafioDvD.Core.EventBus.Events;
 using DesafioDvD.Query.Application.Features.Directors.Queries.GetDirector;
+using MassTransit;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -12,10 +14,12 @@ namespace DesafioDvD.WebApi.Controllers
     public class DirectorController : ApiController
     {
         private readonly IMediator _mediator;
+        private readonly IPublishEndpoint _publishEndpoint;
 
-        public DirectorController(IMediator mediator)
+        public DirectorController(IMediator mediator, IPublishEndpoint publishEndpoint)
         {
             _mediator = mediator;
+            _publishEndpoint = publishEndpoint;
         }
 
         [HttpGet("[action]/{fullName}", Name = "GetDirector")]
@@ -43,6 +47,10 @@ namespace DesafioDvD.WebApi.Controllers
             if(response is null)
                 return CustomResponse((int)HttpStatusCode.BadRequest, false);
 
+            var @event = new DirectorCreatedEvent(response.Id, response.FullName, response.CreatedAt, response.UpdatedAt);
+
+            await _publishEndpoint.Publish(@event);
+
             return CustomResponse((int)HttpStatusCode.Created, true, response);
         }
 
@@ -57,6 +65,9 @@ namespace DesafioDvD.WebApi.Controllers
             if(response is null)
                 return CustomResponse((int)HttpStatusCode.BadRequest, false);
 
+            var @event = new DirectorUpdatedEvent(response.Id, response.FullName, response.UpdatedAt);
+            await _publishEndpoint.Publish(@event);
+
             return CustomResponse((int)HttpStatusCode.OK, true, response);
         }
 
@@ -70,6 +81,9 @@ namespace DesafioDvD.WebApi.Controllers
 
             if(!response)
                 return CustomResponse((int)HttpStatusCode.BadRequest, response);
+
+            var @event = new DirectorDeletedEvent(id.ToString());
+            await _publishEndpoint.Publish(@event);
 
             return CustomResponse((int)HttpStatusCode.OK, response);
         }

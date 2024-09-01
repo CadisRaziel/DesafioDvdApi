@@ -1,0 +1,45 @@
+1 passo no projeto definir a string de conexao 
+AppSettings -> "SqlConnection": "Server=localhost,1433;Database=MoviesRentalDb;User ID=sa;Password=1q2w3e4r@#$;TrustServerCertificate=true"
+
+2 passo rodar o docker do sql (a senha aqui eu que escolho, tem que ser iguais projeto e docker)
+docker run --name sqlserver -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=rhythms" -p 1433:1433 -d mcr.microsoft.com/mssql/server
+
+3 passo rodar o docker do mongoDb (para visualizar clique no mongo no docker e clique em `exec` e digite `mongosh` (ele cria o banco no momento que receber uma msg de escrita)
+docker run --name mongo -d -p 27017:27017 -e AUTH=no mongo\
+
+4 passo rodar o docker do rabbitMQ (5672:5672  para ele trocar msg) (15672:15672 para nosso management para termos acesso a uma interface do rabbitMQ, no docker clique nessa porta, usario e senha: test)
+docker run -d rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+
+5 passo rodar o docker do redis
+docker run -d --name redis -p 6379:6379 redis
+
+
+6 Passo criar migration
+Criando migrations do banco relacional (EF), necessario estar rodando o container
+Abra o terminal do gerenciador de pacotes e digite (lembre que no terminal voce pode selecionar a pasta, selecione o projeto de infraestrutura que esta no publisher, eu seleciono para que eu nao precise ficar pasando caminho na mao):
+Add-Migration Initial -C MoviesRentalWriteContext
+Update-Database
+
+Obs: -C -> Meu context (dentro da pasta infraestrutura do publisher eu criei uma pasta context onde eu crio os DbSet) 
+Obs: Caso der um erro de Globalization Invariant Mode is not supported, clique duas vezes no `DesafioDvd.WebApi`da pasta presentation, vai abrir a classe de configuracao e altere o `InvariantGlobalization` para false
+
+
+
+
+Explicacao rabbitMQ
+RabbitMQ -> Correios
+Exchanges -> bairros
+Queues and Streams -> Ruas
+Consumers(projeto) -> destinatario [Usa banco de dados nao relacional]
+Publisher(projeto) -> Remetente [Usa banco de dados relacional]
+
+Quando nossa aplicacao nao compartilha o mesmo banco um dado que existe em um banco
+e tem que existir no outro banco, ele precisa ser enviado atraves de mensagems
+e essas mensagems sao utilizadas como o sistema do RabbitMQ (Message broker)
+
+
+-d -> modo teste, eu nao quero que o terminal acesse os containers
+
+
+desafio -> https://www.youtube.com/watch?v=XMQ0gxwcqyo
+depuracao -> https://www.youtube.com/watch?v=Mxn0BWk5WGA&t=3461s

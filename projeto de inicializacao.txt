@@ -1,0 +1,2 @@
+Com o botao direito clique em `DesafioDvd.WebApi`
+e selecione o item `Definir como projeto de inicializacao`

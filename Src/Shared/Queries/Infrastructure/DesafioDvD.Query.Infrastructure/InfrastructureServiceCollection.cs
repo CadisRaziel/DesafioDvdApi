@@ -7,7 +7,7 @@ namespace DesafioDvD.Query.Infrastructure
 {
     public static class InfrastructureServiceCollection
     {
-        public static IServiceCollection AddQueryInfrastructure(this IServiceCollection services)
+        public static IServiceCollection AddReadInfrastructure(this IServiceCollection services)
         {
             services.AddScoped<IMoviesRentalReadContext, MoviesRentalReadContext>();
             services.AddScoped<IDirectorsQueryRepository, DirectorsQueryRepository>();
